@@ -10,14 +10,21 @@ const { renderCommandSequence } = require("./typeCommandFrames");
    =============================== */
 const DATA_PATH = "data/git_commands.json";
 const FRAMES_DIR = "output/typing";
-const OUTPUT_VIDEO = "output/videos/git_longform.mp4";
+
+
 const FPS = 30;
 
 /* ===============================
    LOAD DATA
    =============================== */
 const data = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
+const VIDEO_ID = data.videoId || `video_${Date.now()}`;
 
+const OUTPUT_VIDEO = path.join(
+  "output",
+  "videos",
+  `${VIDEO_ID}.mp4`
+);
 /* ===============================
    MAIN
    =============================== */
