@@ -1,0 +1,10 @@
+{
+  "videoTitle": "Git Commands Explained Slowly",
+  "commands": [
+    {
+      "id": "git_init",
+      "command": "git init",
+      "explanation": "This command is used to initialize a new repository. It creates the dot git directory, which contains all the necessary metadata. This is establishing the foundation, for version control in your project. This command is used to initialize a new repository. It creates the dot git directory, which contains all the necessary metadata. This is establishing the foundation, for version control in your project."
+    }
+  ]
+}
