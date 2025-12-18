@@ -1,0 +1,621 @@
+{
+  "language": "en",
+  "duration": 483.18,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "text": "entering the version control documentation space."
+    },
+    {
+      "start": 4.0,
+      "end": 9.48,
+      "text": "Loading the comprehensive Git command reference library dot."
+    },
+    {
+      "start": 9.48,
+      "end": 14.0,
+      "text": "Allow each command to pass through awareness without effort."
+    },
+    {
+      "start": 14.0,
+      "end": 16.14,
+      "text": "There is no pressure to retain."
+    },
+    {
+      "start": 16.14,
+      "end": 19.14,
+      "text": "Simply listen and drift."
+    },
+    {
+      "start": 19.14,
+      "end": 21.56,
+      "text": "The command sequence begins."
+    },
+    {
+      "start": 21.56,
+      "end": 23.74,
+      "text": "Starting with git init,"
+    },
+    {
+      "start": 23.74,
+      "end": 28.6,
+      "text": "this command is used to initialize a new repository."
+    },
+    {
+      "start": 28.6,
+      "end": 34.0,
+      "text": "It creates the .git directory which contains all the necessary metadata."
+    },
+    {
+      "start": 34.0,
+      "end": 39.76,
+      "text": "This is establishing the foundation for version control in your project,"
+    },
+    {
+      "start": 39.76,
+      "end": 41.76,
+      "text": "moving to Git clone."
+    },
+    {
+      "start": 41.76,
+      "end": 46.7,
+      "text": "This is defined as the repository duplication command."
+    },
+    {
+      "start": 46.7,
+      "end": 52.6,
+      "text": "It is creating a complete copy of a remote repository onto your local system."
+    },
+    {
+      "start": 52.6,
+      "end": 57.6,
+      "text": "All history and branches are transferred during this process."
+    },
+    {
+      "start": 57.6,
+      "end": 60.2,
+      "text": "Next, we have git add."
+    },
+    {
+      "start": 60.2,
+      "end": 65.1,
+      "text": "This command is referred to as the staging operation."
+    },
+    {
+      "start": 65.1,
+      "end": 69.8,
+      "text": "It is placing modified files into the staging area."
+    },
+    {
+      "start": 69.8,
+      "end": 74.2,
+      "text": "The staging area is preparing changes for the next commit."
+    },
+    {
+      "start": 74.2,
+      "end": 77.1,
+      "text": "Continuing with git commit,"
+    },
+    {
+      "start": 77.1,
+      "end": 82.9,
+      "text": "this is commonly known as the snapshot command."
+    },
+    {
+      "start": 82.9,
+      "end": 88.1,
+      "text": "It is recording the stage changes into the repository history."
+    },
+    {
+      "start": 88.1,
+      "end": 92.5,
+      "text": "Each commit creates a permanent record with a unique identifier."
+    },
+    {
+      "start": 92.5,
+      "end": 94.7,
+      "text": "Proceeding to git status,"
+    },
+    {
+      "start": 94.7,
+      "end": 97.7,
+      "text": "this command is defined as the state inspector."
+    },
+    {
+      "start": 97.7,
+      "end": 101.9,
+      "text": "It is showing the current condition of your working directory."
+    },
+    {
+      "start": 101.9,
+      "end": 108.5,
+      "text": "Modified files, staged files and untracked files are all displayed here."
+    },
+    {
+      "start": 108.5,
+      "end": 111.7,
+      "text": "Now, examining git push."
+    },
+    {
+      "start": 111.7,
+      "end": 115.7,
+      "text": "This is referred to as the upload command."
+    },
+    {
+      "start": 115.7,
+      "end": 120.0,
+      "text": "It is transferring your local commits to a remote repository."
+    },
+    {
+      "start": 120.0,
+      "end": 124.6,
+      "text": "The remote repository is being updated with your latest changes."
+    },
+    {
+      "start": 124.6,
+      "end": 126.9,
+      "text": "Moving to git pull."
+    },
+    {
+      "start": 126.9,
+      "end": 132.7,
+      "text": "This command is commonly known as the synchronization operation."
+    },
+    {
+      "start": 132.7,
+      "end": 136.0,
+      "text": "It is fetching changes from a remote repository."
+    },
+    {
+      "start": 136.0,
+      "end": 137.0,
+      "text": "What?"
+    },
+    {
+      "start": 137.0,
+      "end": 141.3,
+      "text": "Those changes are then being merged into your current branch."
+    },
+    {
+      "start": 141.3,
+      "end": 143.5,
+      "text": "Next, we have git branch."
+    },
+    {
+      "start": 143.5,
+      "end": 146.4,
+      "text": "This is defined as the branch management command."
+    },
+    {
+      "start": 146.4,
+      "end": 150.7,
+      "text": "This is listing all the existing branches in your repository."
+    },
+    {
+      "start": 150.7,
+      "end": 156.2,
+      "text": "When given a name, it is creating a new branch at the current commit."
+    },
+    {
+      "start": 156.2,
+      "end": 160.0,
+      "text": "Continuing with git checkout."
+    },
+    {
+      "start": 160.0,
+      "end": 163.9,
+      "text": "This command is referred to as the branch switcher."
+    },
+    {
+      "start": 163.9,
+      "end": 167.9,
+      "text": "It is moving your working directory to a different branch."
+    },
+    {
+      "start": 167.9,
+      "end": 170.9,
+      "text": "Files in your workspace are being updated to match"
+    },
+    {
+      "start": 171.0,
+      "end": 174.2,
+      "text": "the target branch, proceeding to git merge."
+    },
+    {
+      "start": 174.2,
+      "end": 179.5,
+      "text": "This is commonly known as the integration command."
+    },
+    {
+      "start": 179.5,
+      "end": 183.6,
+      "text": "It is combining changes from different branches."
+    },
+    {
+      "start": 183.6,
+      "end": 189.0,
+      "text": "The histories are being woven together into a unified timeline."
+    },
+    {
+      "start": 189.0,
+      "end": 193.3,
+      "text": "Now, examining git log."
+    },
+    {
+      "start": 193.3,
+      "end": 196.2,
+      "text": "This command is defined as the history viewer."
+    },
+    {
+      "start": 196.2,
+      "end": 200.8,
+      "text": "It is displaying the commit history for your repository."
+    },
+    {
+      "start": 200.8,
+      "end": 205.7,
+      "text": "Each entry shows the author, the date, and the commit message."
+    },
+    {
+      "start": 205.7,
+      "end": 208.8,
+      "text": "Moving to git diff."
+    },
+    {
+      "start": 208.8,
+      "end": 212.4,
+      "text": "This is referred to as the comparison tool."
+    },
+    {
+      "start": 212.4,
+      "end": 216.6,
+      "text": "It is showing the differences between various states of your code."
+    },
+    {
+      "start": 216.6,
+      "end": 220.8,
+      "text": "Line by line changes are being highlighted for review."
+    },
+    {
+      "start": 220.8,
+      "end": 223.4,
+      "text": "Next, we have git reset."
+    },
+    {
+      "start": 223.4,
+      "end": 228.1,
+      "text": "This command is commonly known as the undo operation."
+    },
+    {
+      "start": 228.1,
+      "end": 232.6,
+      "text": "It is moving the current branch pointer to a different commit."
+    },
+    {
+      "start": 232.6,
+      "end": 236.4,
+      "text": "The staging area can also be modified by this command."
+    },
+    {
+      "start": 236.4,
+      "end": 239.2,
+      "text": "Continuing with git revert."
+    },
+    {
+      "start": 239.2,
+      "end": 242.5,
+      "text": "This is defined as the safe undo command."
+    },
+    {
+      "start": 242.5,
+      "end": 247.0,
+      "text": "It is creating a new commit that reverses previous changes."
+    },
+    {
+      "start": 247.0,
+      "end": 249.2,
+      "text": "The history remains intact."
+    },
+    {
+      "start": 249.2,
+      "end": 252.7,
+      "text": "With this approach, proceeding to git stash,"
+    },
+    {
+      "start": 252.7,
+      "end": 258.0,
+      "text": "this command is referred to as the temporary storage operation."
+    },
+    {
+      "start": 258.0,
+      "end": 262.2,
+      "text": "It is saving your uncommitted changes in a hidden area."
+    },
+    {
+      "start": 262.2,
+      "end": 267.3,
+      "text": "Your working directory is being returned to a clean state."
+    },
+    {
+      "start": 267.3,
+      "end": 270.5,
+      "text": "Now, examining git fetch."
+    },
+    {
+      "start": 270.5,
+      "end": 273.9,
+      "text": "This is commonly known as the download command."
+    },
+    {
+      "start": 273.9,
+      "end": 278.8,
+      "text": "It is retrieving commits from a remote repository."
+    },
+    {
+      "start": 278.8,
+      "end": 283.5,
+      "text": "Unlike pull, it is not merging anything automatically."
+    },
+    {
+      "start": 283.5,
+      "end": 286.4,
+      "text": "Moving to git remote."
+    },
+    {
+      "start": 286.4,
+      "end": 290.0,
+      "text": "This command is defined as the connection manager."
+    },
+    {
+      "start": 290.0,
+      "end": 293.9,
+      "text": "It is listing all configured remote repositories."
+    },
+    {
+      "start": 293.9,
+      "end": 298.3,
+      "text": "You can add, remove, or rename this connection."
+    },
+    {
+      "start": 298.3,
+      "end": 300.3,
+      "text": "Next, we have git tag."
+    },
+    {
+      "start": 300.3,
+      "end": 304.0,
+      "text": "This is referred to as the marker command."
+    },
+    {
+      "start": 304.0,
+      "end": 308.3,
+      "text": "It is creating a named reference to a specific commit."
+    },
+    {
+      "start": 308.3,
+      "end": 312.0,
+      "text": "Tags are often used for release versions."
+    },
+    {
+      "start": 312.0,
+      "end": 314.9,
+      "text": "Continuing with git show."
+    },
+    {
+      "start": 314.9,
+      "end": 319.2,
+      "text": "This command is commonly known as the detail viewer."
+    },
+    {
+      "start": 319.2,
+      "end": 323.6,
+      "text": "It is displaying information about a specific commit."
+    },
+    {
+      "start": 323.6,
+      "end": 327.5,
+      "text": "The changes introduced are being shown in full."
+    },
+    {
+      "start": 327.5,
+      "end": 332.0,
+      "text": "Proceeding to git RM, this is defined as the removal command."
+    },
+    {
+      "start": 332.0,
+      "end": 335.6,
+      "text": "It is deleting files from your working directory."
+    },
+    {
+      "start": 335.6,
+      "end": 341.2,
+      "text": "Those files are also being removed from version control."
+    },
+    {
+      "start": 341.2,
+      "end": 345.7,
+      "text": "Now, examining git MV."
+    },
+    {
+      "start": 345.7,
+      "end": 349.9,
+      "text": "This command is referred to as the rename operation."
+    },
+    {
+      "start": 349.9,
+      "end": 354.0,
+      "text": "It is moving or renaming files within your repository."
+    },
+    {
+      "start": 354.0,
+      "end": 359.8,
+      "text": "Git is tracking this change as a rename rather than a deletion."
+    },
+    {
+      "start": 359.8,
+      "end": 363.4,
+      "text": "Moving to git config."
+    },
+    {
+      "start": 363.4,
+      "end": 367.6,
+      "text": "This is commonly known as the settings command."
+    },
+    {
+      "start": 367.6,
+      "end": 370.7,
+      "text": "It is managing your git configuration options."
+    },
+    {
+      "start": 370.7,
+      "end": 375.5,
+      "text": "Username, email, and preferences are all controlled here."
+    },
+    {
+      "start": 375.5,
+      "end": 378.1,
+      "text": "Next, we have git rebase."
+    },
+    {
+      "start": 378.1,
+      "end": 381.5,
+      "text": "This command is defined as the history rewriter."
+    },
+    {
+      "start": 381.5,
+      "end": 384.4,
+      "text": "It is moving commits to a new base."
+    },
+    {
+      "start": 384.4,
+      "end": 388.8,
+      "text": "The commit history is being reorganized for clarity."
+    },
+    {
+      "start": 388.8,
+      "end": 392.7,
+      "text": "Continuing with git cherry pick guide."
+    },
+    {
+      "start": 392.7,
+      "end": 396.2,
+      "text": "This is referred to as the selective merge command."
+    },
+    {
+      "start": 396.2,
+      "end": 400.8,
+      "text": "It is applying specific commits from one branch to another."
+    },
+    {
+      "start": 400.8,
+      "end": 405.0,
+      "text": "Only the chosen changes are being transferred."
+    },
+    {
+      "start": 405.0,
+      "end": 407.2,
+      "text": "Proceeding to git clean."
+    },
+    {
+      "start": 407.2,
+      "end": 410.8,
+      "text": "This command is commonly known as the workspace cleaner."
+    },
+    {
+      "start": 410.8,
+      "end": 414.6,
+      "text": "It is removing untracked files from your directory."
+    },
+    {
+      "start": 414.6,
+      "end": 419.0,
+      "text": "The working area is being restored to a pristine state."
+    },
+    {
+      "start": 419.0,
+      "end": 422.3,
+      "text": "Now, examining git blame."
+    },
+    {
+      "start": 422.3,
+      "end": 427.2,
+      "text": "This is defined as the annotation command."
+    },
+    {
+      "start": 427.2,
+      "end": 431.3,
+      "text": "It is showing who modified each line of a file."
+    },
+    {
+      "start": 431.3,
+      "end": 435.5,
+      "text": "The commit and author information are displayed for every line."
+    },
+    {
+      "start": 435.5,
+      "end": 437.8,
+      "text": "Moving to git grep."
+    },
+    {
+      "start": 437.8,
+      "end": 442.0,
+      "text": "This command is referred to as the search tool."
+    },
+    {
+      "start": 442.0,
+      "end": 446.6,
+      "text": "It is looking for patterns within your tracked files."
+    },
+    {
+      "start": 446.6,
+      "end": 450.7,
+      "text": "Text matchings being performed across the entire repository."
+    },
+    {
+      "start": 450.7,
+      "end": 453.4,
+      "text": "Next, we have git riff log."
+    },
+    {
+      "start": 453.4,
+      "end": 457.1,
+      "text": "This is commonly known as the reference log viewer."
+    },
+    {
+      "start": 457.1,
+      "end": 462.7,
+      "text": "It is displaying a history of where your branches have pointed."
+    },
+    {
+      "start": 462.7,
+      "end": 466.1,
+      "text": "Even deleted commits can be found here."
+    },
+    {
+      "start": 466.1,
+      "end": 469.7,
+      "text": "Continuing with git bisect."
+    },
+    {
+      "start": 469.7,
+      "end": 470.9,
+      "text": "Why?"
+    },
+    {
+      "start": 470.9,
+      "end": 474.1,
+      "text": "This command is defined as the bug finder."
+    },
+    {
+      "start": 474.1,
+      "end": 478.4,
+      "text": "It is using binary search to locate problematic comets."
+    },
+    {
+      "start": 478.4,
+      "end": 483.2,
+      "text": "The process is narrowing down, which change introduced an issue."
+    }
+  ]
+}

@@ -1,37 +1,22 @@
 {
-  "videoId": "Git_Commands_Explained_Slowly_start_n",
-  "commands": [
-    {
-      "id": "git_init",
-      "command": "",
-      "explanation": "Entering the version control documentation space."
-    },
-        {
-      "id": "git_init",
-      "command": "",
-      "explanation": "Loading the comprehensive Git command reference library."
-    },
-     {
-      "id": "git_init",
-      "command": "",
-      "explanation": "Allow each command to pass through awareness without effort."
-    },
-     {
-      "id": "git_init",
-      "command": "",
-      "explanation": "There is no pressure to retain."
-    },
-     {
-      "id": "git_init",
-      "command": "",
-      "explanation": "Simply listen and drift."
-    },
-    {
-      "id": "git_init",
-      "command": "",
-      "explanation": "The command sequence begins."
-    }
-  ]
-
+"videoId": "Git_Commands_Explained_Slowly_start_n",
+"fps": 30,
+"timeline": [
+{
+"id": "intro",
+"type": "narration",
+"command": null,
+"text": "Entering the version control documentation space. Loading the comprehensive Git command reference library. Allow each command to pass through awareness without effort. There is no pressure to retain. Simply listen and drift. The command sequence begins.",
+"start": 0.0,
+"end": 21.56
+},
+{
+"id": "git_init",
+"type": "command",
+"command": "git init",
+"text": "This command initializes a new repository. It creates the dot git directory, which contains all necessary metadata. This establishes the foundation for version control in your project.",
+"start": 21.56,
+"end": 39.76
 }
-
+]
+}

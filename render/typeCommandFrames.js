@@ -167,14 +167,28 @@ async function renderCommandSequence(commandText, explanationText) {
     await renderFrame(commandText, false, i / fadeFrames, explanationText);
   }
 
-  // Hold explanation
-  const holdFrames = Math.floor((EXPLANATION_HOLD_MS / 1000) * FPS);
-  for (let i = 0; i < holdFrames; i++) {
+}
+
+async function renderExplanationHold(commandText, explanationText, frames) {
+  for (let i = 0; i < frames; i++) {
     await renderFrame(commandText, false, 1, explanationText);
   }
 }
 
+function getCommandAnimationFrames(commandText) {
+  const typingFrames = commandText.length * FRAMES_PER_CHAR;
+
+  const blinkFrames =
+    Math.floor((POST_TYPE_PAUSE_MS / 1000) * FPS);
+
+  const fadeFrames =
+    Math.floor((EXPLANATION_FADE_MS / 1000) * FPS);
+
+  return typingFrames + blinkFrames + fadeFrames;
+}
+
+
 /* ===============================
    EXPORT
    =============================== */
-module.exports = { renderCommandSequence };
+module.exports = { renderCommandSequence, renderExplanationHold, getCommandAnimationFrames };

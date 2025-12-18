@@ -1,0 +1,246 @@
+{
+"videoId": "Git_Commands_Explained_Slowly_start_n",
+"fps": 30,
+"timeline": [
+{
+"id": "intro",
+"type": "narration",
+"command": null,
+"text": "Entering the version control documentation space. Loading the comprehensive Git command reference library. Allow each command to pass through awareness without effort. There is no pressure to retain. Simply listen and drift. The command sequence begins.",
+"start": 0.0,
+"end": 21.56
+},
+{
+"id": "git_init",
+"type": "command",
+"command": "git init",
+"text": "This command initializes a new repository. It creates the dot git directory, which contains all necessary metadata. This establishes the foundation for version control in your project.",
+"start": 21.56,
+"end": 39.76
+},
+{
+"id": "git_clone",
+"type": "command",
+"command": "git clone",
+"text": "This command duplicates a repository. It creates a complete local copy of a remote repository, including all history and branches.",
+"start": 39.76,
+"end": 57.6
+},
+{
+"id": "git_add",
+"type": "command",
+"command": "git add",
+"text": "This command stages changes. Modified files are placed into the staging area to prepare them for the next commit.",
+"start": 57.6,
+"end": 74.2
+},
+{
+"id": "git_commit",
+"type": "command",
+"command": "git commit",
+"text": "This command records staged changes. Each commit creates a permanent snapshot with a unique identifier.",
+"start": 74.2,
+"end": 92.5
+},
+{
+"id": "git_status",
+"type": "command",
+"command": "git status",
+"text": "This command shows the current state of the working directory, including modified, staged, and untracked files.",
+"start": 92.5,
+"end": 108.5
+},
+{
+"id": "git_push",
+"type": "command",
+"command": "git push",
+"text": "This command uploads local commits to a remote repository, updating it with your latest changes.",
+"start": 108.5,
+"end": 124.6
+},
+{
+"id": "git_pull",
+"type": "command",
+"command": "git pull",
+"text": "This command fetches changes from a remote repository and merges them into your current branch.",
+"start": 124.6,
+"end": 141.3
+},
+{
+"id": "git_branch",
+"type": "command",
+"command": "git branch",
+"text": "This command manages branches. It lists existing branches and can create a new branch at the current commit.",
+"start": 141.3,
+"end": 156.2
+},
+{
+"id": "git_checkout",
+"type": "command",
+"command": "git checkout",
+"text": "This command switches branches. Your working directory is updated to match the target branch.",
+"start": 156.2,
+"end": 174.2
+},
+{
+"id": "git_merge",
+"type": "command",
+"command": "git merge",
+"text": "This command integrates changes from different branches, weaving histories into a unified timeline.",
+"start": 174.2,
+"end": 189.0
+},
+{
+"id": "git_log",
+"type": "command",
+"command": "git log",
+"text": "This command displays commit history, showing the author, date, and message for each entry.",
+"start": 189.0,
+"end": 205.7
+},
+{
+"id": "git_diff",
+"type": "command",
+"command": "git diff",
+"text": "This command compares changes between code states, highlighting line by line differences.",
+"start": 205.7,
+"end": 220.8
+},
+{
+"id": "git_reset",
+"type": "command",
+"command": "git reset",
+"text": "This command moves the current branch pointer to a different commit and can modify the staging area.",
+"start": 220.8,
+"end": 236.4
+},
+{
+"id": "git_revert",
+"type": "command",
+"command": "git revert",
+"text": "This command safely undoes changes by creating a new commit while preserving history.",
+"start": 236.4,
+"end": 249.2
+},
+{
+"id": "git_stash",
+"type": "command",
+"command": "git stash",
+"text": "This command temporarily stores uncommitted changes and restores a clean working directory.",
+"start": 249.2,
+"end": 267.3
+},
+{
+"id": "git_fetch",
+"type": "command",
+"command": "git fetch",
+"text": "This command downloads commits from a remote repository without merging them.",
+"start": 267.3,
+"end": 283.5
+},
+{
+"id": "git_remote",
+"type": "command",
+"command": "git remote",
+"text": "This command manages remote connections, allowing you to list, add, remove, or rename remotes.",
+"start": 283.5,
+"end": 298.3
+},
+{
+"id": "git_tag",
+"type": "command",
+"command": "git tag",
+"text": "This command creates named references to specific commits, often used for release versions.",
+"start": 298.3,
+"end": 312.0
+},
+{
+"id": "git_show",
+"type": "command",
+"command": "git show",
+"text": "This command displays detailed information about a specific commit and its changes.",
+"start": 312.0,
+"end": 327.5
+},
+{
+"id": "git_rm",
+"type": "command",
+"command": "git rm",
+"text": "This command removes files from the working directory and from version control.",
+"start": 327.5,
+"end": 341.2
+},
+{
+"id": "git_mv",
+"type": "command",
+"command": "git mv",
+"text": "This command renames or moves files while tracking the change as a rename.",
+"start": 341.2,
+"end": 359.8
+},
+{
+"id": "git_config",
+"type": "command",
+"command": "git config",
+"text": "This command manages configuration settings such as username, email, and preferences.",
+"start": 359.8,
+"end": 375.5
+},
+{
+"id": "git_rebase",
+"type": "command",
+"command": "git rebase",
+"text": "This command rewrites commit history by moving commits to a new base for clarity.",
+"start": 375.5,
+"end": 388.8
+},
+{
+"id": "git_cherry_pick",
+"type": "command",
+"command": "git cherry-pick",
+"text": "This command applies selected commits from one branch onto another.",
+"start": 388.8,
+"end": 405.0
+},
+{
+"id": "git_clean",
+"type": "command",
+"command": "git clean",
+"text": "This command removes untracked files and restores the workspace to a clean state.",
+"start": 405.0,
+"end": 419.0
+},
+{
+"id": "git_blame",
+"type": "command",
+"command": "git blame",
+"text": "This command shows who last modified each line of a file, including commit and author information.",
+"start": 419.0,
+"end": 435.5
+},
+{
+"id": "git_grep",
+"type": "command",
+"command": "git grep",
+"text": "This command searches for patterns across tracked files in the repository.",
+"start": 435.5,
+"end": 450.7
+},
+{
+"id": "git_reflog",
+"type": "command",
+"command": "git reflog",
+"text": "This command displays the reference log, showing where branch heads have pointed, including deleted commits.",
+"start": 450.7,
+"end": 466.1
+},
+{
+"id": "git_bisect",
+"type": "command",
+"command": "git bisect",
+"text": "This command uses binary search to identify the commit that introduced a bug.",
+"start": 466.1,
+"end": 483.2
+}
+]
+}

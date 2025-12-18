@@ -3,7 +3,11 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-const { renderCommandSequence } = require("./typeCommandFrames");
+const { renderCommandSequence, renderExplanationHold, getCommandAnimationFrames } = require("./typeCommandFrames");
+
+function secondsToFrames(seconds, fps) {
+  return Math.max(1, Math.round(seconds * fps));
+}
 
 /* ===============================
    CONFIG
@@ -32,10 +36,39 @@ const OUTPUT_VIDEO = path.join(
   console.log("🟢 Starting render pipeline");
 
   // 1️⃣ Render frames for each command
-  for (const entry of data.commands) {
-    console.log(`▶ Rendering command: ${entry.command}`);
-    await renderCommandSequence(entry.command, entry.explanation);
+const timeline = data.timeline;
+const fps = data.fps || FPS;
+
+
+for (const block of timeline) {
+  const durationSeconds = block.end - block.start;
+  const totalFrames = secondsToFrames(durationSeconds, fps);
+
+  console.log(`▶ Rendering block: ${block.id} (${block.type})`);
+
+  let remainingFrames = totalFrames;
+
+  // 1️⃣ Command animation (counts toward timeline time)
+  if (block.type === "command" && block.command) {
+    const animationFrames =
+      getCommandAnimationFrames(block.command);
+
+    await renderCommandSequence(block.command, "");
+
+    remainingFrames -= animationFrames;
   }
+
+  // 2️⃣ Hold explanation for remaining time only
+  if (remainingFrames > 0) {
+    await renderExplanationHold(
+      block.command || "",
+      block.text,
+      remainingFrames
+    );
+  }
+}
+
+
 
   console.log("🟢 All frames rendered");
 

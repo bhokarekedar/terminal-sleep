@@ -1,2 +1,7 @@
 node_modules
 output/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env    
