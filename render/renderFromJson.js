@@ -6,39 +6,34 @@ const { execSync } = require("child_process");
 const { renderCommandSequence } = require("./typeCommandFrames");
 
 /* ===============================
-   PATHS
+   CONFIG
    =============================== */
 const DATA_PATH = "data/git_commands.json";
 const FRAMES_DIR = "output/typing";
-const OUTPUT_VIDEO = "output/git_longform.mp4";
+const OUTPUT_VIDEO = "output/videos/git_longform.mp4";
 const FPS = 30;
 
 /* ===============================
    LOAD DATA
    =============================== */
-const data = JSON.parse(
-  fs.readFileSync(DATA_PATH, "utf8")
-);
+const data = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
 
 /* ===============================
-   MAIN EXECUTION
+   MAIN
    =============================== */
 (async () => {
-  console.log("🟢 Starting render sequence");
+  console.log("🟢 Starting render pipeline");
 
-  // 1. Render all frames
+  // 1️⃣ Render frames for each command
   for (const entry of data.commands) {
-    console.log(`▶ Rendering: ${entry.command}`);
-    await renderCommandSequence(
-      entry.command,
-      entry.explanation
-    );
+    console.log(`▶ Rendering command: ${entry.command}`);
+    await renderCommandSequence(entry.command, entry.explanation);
   }
 
-  console.log("🟢 Frame rendering complete");
+  console.log("🟢 All frames rendered");
 
-  // 2. Assemble video using FFmpeg
-  console.log("🎞 Creating video via FFmpeg...");
+  // 2️⃣ Assemble video
+  console.log("🎞 Assembling video with FFmpeg...");
 
   const ffmpegCmd = `
 ffmpeg -y \
@@ -56,16 +51,14 @@ ${OUTPUT_VIDEO}
 
   console.log("✅ Video created:", OUTPUT_VIDEO);
 
-  // 3. Cleanup frames
-  console.log("🧹 Cleaning up frame files...");
+  // 3️⃣ Cleanup
+  console.log("🧹 Cleaning frame files...");
 
-  const files = fs.readdirSync(FRAMES_DIR);
-  for (const file of files) {
+  for (const file of fs.readdirSync(FRAMES_DIR)) {
     if (file.endsWith(".png")) {
       fs.unlinkSync(path.join(FRAMES_DIR, file));
     }
   }
 
-  console.log("🧼 Frame cleanup complete");
-  console.log("🌙 Rendering pipeline finished successfully");
+  console.log("🌙 Render pipeline finished successfully");
 })();

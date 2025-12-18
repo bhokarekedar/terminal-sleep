@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 /* ===============================
-   GLOBAL CONFIG
+   CANVAS CONFIG
    =============================== */
 const WIDTH = 1920;
 const HEIGHT = 1080;
@@ -13,60 +13,73 @@ const FPS = 30;
 
 const TERMINAL_HEIGHT = Math.floor(HEIGHT * 0.4);
 const PANEL_HEIGHT = HEIGHT - TERMINAL_HEIGHT;
-const EXPLANATION_TOP_PADDING = 60;
-
-const OUTPUT_DIR = "output/typing";
-
-fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-
-const FONT_SIZE = 58;
-const EXPLANATION_FONT_SIZE = 50;
-
-const CURSOR_BLINK_MS = 1000;
-const POST_TYPE_PAUSE_MS = 3000;
-const EXPLANATION_FADE_MS = 2000;
-const EXPLANATION_HOLD_MS = 4000;
-const FRAMES_PER_CHAR = 6;
-const TERMINAL_PROMPT = "sleepy@tsp ~ % ";
-const PANEL_OPACITY = 0.6;
-const EXPLANATION_MAX_WIDTH = Math.floor(WIDTH * 0.75);
-const EXPLANATION_LINE_HEIGHT = Math.floor(EXPLANATION_FONT_SIZE * 1.6);
 
 /* ===============================
-   SHARED FRAME COUNTER
+   TYPOGRAPHY
+   =============================== */
+const TERMINAL_FONT_SIZE = 58;
+const EXPLANATION_FONT_SIZE = 46;
+
+const TERMINAL_COLOR = "#E6EDF3";
+const EXPLANATION_COLOR = "rgba(201, 209, 217, 0.85)";
+const BACKGROUND_COLOR = "#0B0D10";
+
+const LINE_HEIGHT = Math.floor(EXPLANATION_FONT_SIZE * 1.55);
+const MAX_TEXT_WIDTH = Math.floor(WIDTH * 0.72);
+
+/* ===============================
+   TIMING
+   =============================== */
+const CURSOR_BLINK_MS = 1000;
+const POST_TYPE_PAUSE_MS = 2500;
+const EXPLANATION_FADE_MS = 1800;
+const EXPLANATION_HOLD_MS = 3500;
+const FRAMES_PER_CHAR = 6;
+
+/* ===============================
+   TERMINAL
+   =============================== */
+const TERMINAL_PROMPT = "sleepy@tsp ~ % ";
+const CURSOR_COLOR = "#3FB950";
+
+/* ===============================
+   OUTPUT
+   =============================== */
+const OUTPUT_DIR = "output/typing";
+fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+
+/* ===============================
+   FRAME COUNTER
    =============================== */
 let frameIndex = 1;
 
+/* ===============================
+   HELPERS
+   =============================== */
 function wrapText(ctx, text, maxWidth) {
   const words = text.split(" ");
   const lines = [];
-  let currentLine = "";
+  let line = "";
 
-  for (let i = 0; i < words.length; i++) {
-    const testLine = currentLine ? currentLine + " " + words[i] : words[i];
-
-    const metrics = ctx.measureText(testLine);
-
-    if (metrics.width > maxWidth && currentLine) {
-      lines.push(currentLine);
-      currentLine = words[i];
+  for (const word of words) {
+    const test = line ? `${line} ${word}` : word;
+    if (ctx.measureText(test).width > maxWidth && line) {
+      lines.push(line);
+      line = word;
     } else {
-      currentLine = testLine;
+      line = test;
     }
   }
 
-  if (currentLine) {
-    lines.push(currentLine);
-  }
-
+  if (line) lines.push(line);
   return lines;
 }
 
 /* ===============================
-   FRAME RENDERER
+   FRAME RENDER
    =============================== */
 async function renderFrame(
-  text,
+  commandText,
   showCursor,
   explanationOpacity = 0,
   explanationText = ""
@@ -75,61 +88,49 @@ async function renderFrame(
   const ctx = canvas.getContext("2d");
 
   // Background
-  ctx.fillStyle = "#0D0D0D";
+  ctx.fillStyle = BACKGROUND_COLOR;
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  // Terminal text
-  ctx.fillStyle = "#E6EDF3";
-  ctx.font = `${FONT_SIZE}px JetBrains Mono`;
+  // Terminal
+  ctx.font = `${TERMINAL_FONT_SIZE}px JetBrains Mono`;
+  ctx.fillStyle = TERMINAL_COLOR;
   ctx.textBaseline = "top";
-  ctx.textAlign = "left";
 
-  const startX = 80;
-  const startY = 80;
+  const terminalX = 80;
+  const terminalY = 90;
+  const fullText = `${TERMINAL_PROMPT}${commandText}`;
 
-  ctx.fillText(`${TERMINAL_PROMPT}${text}`, startX, startY);
+  ctx.fillText(fullText, terminalX, terminalY);
 
   // Cursor
   if (showCursor) {
-    ctx.fillStyle = "#3FB950";
-    const textWidth = ctx.measureText(`${TERMINAL_PROMPT}${text}`).width;
-
-    ctx.fillText("|", startX + textWidth, startY);
+    const w = ctx.measureText(fullText).width;
+    ctx.fillStyle = CURSOR_COLOR;
+    ctx.fillText("|", terminalX + w + 4, terminalY);
   }
 
   // Explanation panel
   if (explanationOpacity > 0) {
-    ctx.fillStyle = `rgba(0, 0, 0, ${PANEL_OPACITY * explanationOpacity})`;
-    ctx.fillRect(0, TERMINAL_HEIGHT, WIDTH, HEIGHT - TERMINAL_HEIGHT);
+    ctx.fillStyle = `rgba(0,0,0,${0.55 * explanationOpacity})`;
+    ctx.fillRect(0, TERMINAL_HEIGHT, WIDTH, PANEL_HEIGHT);
 
-    ctx.fillStyle = `rgba(201, 209, 217, ${explanationOpacity})`;
     ctx.font = `${EXPLANATION_FONT_SIZE}px JetBrains Mono`;
-    ctx.textAlign = "center";
-
-    const panelTop = TERMINAL_HEIGHT;
-
-    const explanationY = panelTop + EXPLANATION_TOP_PADDING;
-
+    ctx.fillStyle = `rgba(201,209,217,${explanationOpacity})`;
     ctx.textAlign = "center";
     ctx.textBaseline = "top";
 
-    const lines = wrapText(ctx, explanationText, EXPLANATION_MAX_WIDTH);
+    const lines = wrapText(ctx, explanationText, MAX_TEXT_WIDTH).slice(0, 5);
 
-    // Optional: limit max lines (prevents wall of text)
-    const MAX_LINES = 6;
-    const visibleLines = lines.slice(0, MAX_LINES);
+    const totalHeight = lines.length * LINE_HEIGHT;
+    let y = TERMINAL_HEIGHT + (PANEL_HEIGHT - totalHeight) / 2;
 
-    // Center the block vertically from explanationY
-    let textY = explanationY;
-
-    for (let i = 0; i < visibleLines.length; i++) {
-      ctx.fillText(visibleLines[i], WIDTH / 2, textY);
-      textY += EXPLANATION_LINE_HEIGHT;
+    for (const line of lines) {
+      ctx.fillText(line, WIDTH / 2, y);
+      y += LINE_HEIGHT;
     }
   }
 
   const buffer = await canvas.png;
-
   fs.writeFileSync(
     path.join(OUTPUT_DIR, `frame_${String(frameIndex++).padStart(6, "0")}.png`),
     buffer
@@ -137,47 +138,43 @@ async function renderFrame(
 }
 
 /* ===============================
-   COMMAND SEQUENCE RENDERER
+   COMMAND SEQUENCE
    =============================== */
 async function renderCommandSequence(commandText, explanationText) {
-  // 1. Type command
+  // Type command
   for (let i = 1; i <= commandText.length; i++) {
     for (let f = 0; f < FRAMES_PER_CHAR; f++) {
       await renderFrame(commandText.slice(0, i), true);
     }
   }
 
-  // 2. Cursor blink pause
-  const framesPerHalfBlink = Math.floor((CURSOR_BLINK_MS / 2 / 1000) * FPS);
-  const blinkCycles = Math.floor(POST_TYPE_PAUSE_MS / CURSOR_BLINK_MS);
+  // Cursor blink pause
+  const blinkFrames = Math.floor((CURSOR_BLINK_MS / 1000) * FPS / 2);
+  const cycles = Math.floor(POST_TYPE_PAUSE_MS / CURSOR_BLINK_MS);
 
-  for (let i = 0; i < blinkCycles; i++) {
-    for (let f = 0; f < framesPerHalfBlink; f++) {
+  for (let i = 0; i < cycles; i++) {
+    for (let f = 0; f < blinkFrames; f++) {
       await renderFrame(commandText, true);
     }
-    for (let f = 0; f < framesPerHalfBlink; f++) {
+    for (let f = 0; f < blinkFrames; f++) {
       await renderFrame(commandText, false);
     }
   }
 
-  // 3. Explanation fade-in
+  // Fade in explanation
   const fadeFrames = Math.floor((EXPLANATION_FADE_MS / 1000) * FPS);
-
   for (let i = 0; i <= fadeFrames; i++) {
     await renderFrame(commandText, false, i / fadeFrames, explanationText);
   }
 
-  // 4. Hold explanation
+  // Hold explanation
   const holdFrames = Math.floor((EXPLANATION_HOLD_MS / 1000) * FPS);
-
   for (let i = 0; i < holdFrames; i++) {
     await renderFrame(commandText, false, 1, explanationText);
   }
 }
 
 /* ===============================
-   EXPORTS
+   EXPORT
    =============================== */
-module.exports = {
-  renderCommandSequence,
-};
+module.exports = { renderCommandSequence };

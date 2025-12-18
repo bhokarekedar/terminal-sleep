@@ -7,7 +7,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "render": "node render/renderFromJson.js",
+    "start": "node render/renderFromJson.js"
   },
   "dependencies": {
     "skia-canvas": "^3.0.8"
