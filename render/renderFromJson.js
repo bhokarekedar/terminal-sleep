@@ -29,6 +29,13 @@ const OUTPUT_VIDEO = path.join(
   "videos",
   `${VIDEO_ID}.mp4`
 );
+const AUDIO_PATH = "server/audio/git_commands_narration.wav";
+
+const FINAL_VIDEO = path.join(
+  "output",
+  "videos",
+  `${VIDEO_ID}_final.mp4`
+);
 /* ===============================
    MAIN
    =============================== */
@@ -90,6 +97,21 @@ ${OUTPUT_VIDEO}
   execSync(ffmpegCmd, { stdio: "inherit" });
 
   console.log("✅ Video created:", OUTPUT_VIDEO);
+console.log("🔊 Muxing audio with video...");
+
+const muxCmd = `
+ffmpeg -y \
+-i ${OUTPUT_VIDEO} \
+-i ${AUDIO_PATH} \
+-c:v copy \
+-c:a aac \
+-shortest \
+${FINAL_VIDEO}
+`;
+
+execSync(muxCmd, { stdio: "inherit" });
+
+console.log("🎉 Final video with audio created:", FINAL_VIDEO);
 
   // 3️⃣ Cleanup
   console.log("🧹 Cleaning frame files...");

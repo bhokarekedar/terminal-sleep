@@ -1,4 +1,4 @@
-node_modules
+node_modules/
 output/
 venv/
 __pycache__/
