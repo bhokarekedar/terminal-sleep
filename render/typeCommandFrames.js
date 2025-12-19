@@ -140,29 +140,25 @@ async function renderFrame(
 /* ===============================
    COMMAND SEQUENCE
    =============================== */
-async function renderCommandSequence(commandText, explanationText) {
-  // Type command
-  for (let i = 1; i <= commandText.length; i++) {
-    for (let f = 0; f < FRAMES_PER_CHAR; f++) {
+async function renderCommandSequence(commandText, maxFrames) {
+  let used = 0;
+
+  // typing
+  for (let i = 1; i <= commandText.length && used < maxFrames; i++) {
+    for (let f = 0; f < FRAMES_PER_CHAR && used < maxFrames; f++) {
       await renderFrame(commandText.slice(0, i), true);
+      used++;
     }
   }
 
-  // Cursor blink pause
-  const blinkFrames = Math.floor((CURSOR_BLINK_MS / 1000) * FPS / 2);
-  const cycles = Math.floor(POST_TYPE_PAUSE_MS / CURSOR_BLINK_MS);
-
-  for (let i = 0; i < cycles; i++) {
-    for (let f = 0; f < blinkFrames; f++) {
-      await renderFrame(commandText, true);
-    }
-    for (let f = 0; f < blinkFrames; f++) {
-      await renderFrame(commandText, false);
-    }
+  // blink
+  const blinkFrames = Math.floor((POST_TYPE_PAUSE_MS / 1000) * FPS);
+  for (let i = 0; i < blinkFrames && used < maxFrames; i++) {
+    await renderFrame(commandText, i % 2 === 0);
+    used++;
   }
 
-
-
+  return used;
 }
 
 async function renderExplanationHold(commandText, explanationText, frames) {

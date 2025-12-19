@@ -6,17 +6,81 @@
 "id": "intro",
 "type": "narration",
 "command": null,
-"text": "Entering the version control documentation space. Loading the comprehensive Git command reference library. Allow each command to pass through awareness without effort. There is no pressure to retain. Simply listen and drift. The command sequence begins.",
+"text": "Entering the version control documentation space.",
 "start": 0.0,
-"end": 21.56
+"end": 4.0
+},
+{
+"id": "intro_loading",
+"type": "narration",
+"command": null,
+"text": "Loading the comprehensive Git command reference library.",
+"start": 4.0,
+"end": 8.6
+},
+{
+"id": "intro_guidance",
+"type": "narration",
+"command": null,
+"text": "Allow each command to pass through awareness without effort.",
+"start": 8.6,
+"end": 13.12
+},
+{
+"id": "intro_relax",
+"type": "narration",
+"command": null,
+"text": "There is no pressure to retain. Simply listen and drift.",
+"start": 13.12,
+"end": 18.28
 },
 {
 "id": "git_init",
 "type": "command",
 "command": "git init",
-"text": "This command initializes a new repository. It creates the dot git directory, which contains all necessary metadata. This establishes the foundation for version control in your project.",
-"start": 21.56,
-"end": 39.76
+"text": "Starting with git init. This command initializes a new repository. It creates the dot git directory containing all necessary metadata, establishing the foundation for version control in your project.",
+"start": 18.28,
+"end": 38.88
+},
+{
+"id": "git_clone",
+"type": "command",
+"command": "git clone",
+"text": "Moving to git clone. This command duplicates a repository, creating a complete local copy of a remote project. All history and branches are transferred in this process.",
+"start": 38.88,
+"end": 56.72
+},
+{
+"id": "git_add",
+"type": "command",
+"command": "git add",
+"text": "Next we have git add. This staging operation places modified files into the staging area, preparing changes for the next commit.",
+"start": 56.72,
+"end": 73.4
+},
+{
+"id": "git_commit",
+"type": "command",
+"command": "git commit",
+"text": "Continuing with git commit. This snapshot command records staged changes into the repository history. Each commit creates a permanent record with a unique identifier.",
+"start": 73.4,
+"end": 91.68
+},
+{
+"id": "git_status",
+"type": "command",
+"command": "git status",
+"text": "Proceeding to git status. This state inspector shows the current condition of your working directory, including modified, staged, and untracked files.",
+"start": 91.68,
+"end": 107.68
+},
+{
+"id": "git_push",
+"type": "command",
+"command": "git push",
+"text": "Now examining git push. This upload command transfers your local commits to a remote repository, updating it with your latest changes.",
+"start": 107.68,
+"end": 123.8
 }
 ]
 }

@@ -83,7 +83,11 @@ const FINAL_VIDEO = path.join(
 
     // ── Command typing animation ──
     if (block.type === "command" && block.command) {
-const animationFrames = getCommandAnimationFrames(block.command);
+const animationFrames = Math.min(
+  getCommandAnimationFrames(block.command),
+  totalFrames
+);
+
 const typingFrames = getTypingFrames(block.command);
 
 typingAudioEvents.push({
@@ -92,10 +96,12 @@ typingAudioEvents.push({
 });
 
       // render typing animation ONCE
-      await renderCommandSequence(block.command, "");
+const usedFrames = await renderCommandSequence(
+  block.command,
+  totalFrames
+);
 
-      // subtract animation time from timeline budget
-      remainingFrames -= animationFrames;
+remainingFrames = totalFrames - usedFrames;
     }
 
     // ── Explanation / narration hold ──

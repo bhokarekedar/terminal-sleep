@@ -1,6 +1,6 @@
 {
   "language": "en",
-  "duration": 483.18,
+  "duration": 770.06,
   "segments": [
     {
       "start": 0.0,
@@ -9,613 +9,998 @@
     },
     {
       "start": 4.0,
-      "end": 9.48,
-      "text": "Loading the comprehensive Git command reference library dot."
+      "end": 8.6,
+      "text": "Loading the comprehensive Git command reference library"
     },
     {
-      "start": 9.48,
-      "end": 14.0,
-      "text": "Allow each command to pass through awareness without effort."
+      "start": 8.6,
+      "end": 13.12,
+      "text": "allow each command to pass through awareness without effort."
     },
     {
-      "start": 14.0,
-      "end": 16.14,
+      "start": 13.12,
+      "end": 15.28,
       "text": "There is no pressure to retain."
     },
     {
-      "start": 16.14,
-      "end": 19.14,
+      "start": 15.28,
+      "end": 18.28,
       "text": "Simply listen and drift."
     },
     {
-      "start": 19.14,
-      "end": 21.56,
-      "text": "The command sequence begins."
+      "start": 18.28,
+      "end": 22.88,
+      "text": "The command sequence begins, starting with git init."
     },
     {
-      "start": 21.56,
-      "end": 23.74,
-      "text": "Starting with git init,"
+      "start": 22.88,
+      "end": 27.72,
+      "text": "This command is used to initialize a new repository."
     },
     {
-      "start": 23.74,
-      "end": 28.6,
-      "text": "this command is used to initialize a new repository."
-    },
-    {
-      "start": 28.6,
-      "end": 34.0,
+      "start": 27.72,
+      "end": 33.12,
       "text": "It creates the .git directory which contains all the necessary metadata."
     },
     {
-      "start": 34.0,
-      "end": 39.76,
+      "start": 33.12,
+      "end": 38.88,
       "text": "This is establishing the foundation for version control in your project,"
     },
     {
-      "start": 39.76,
-      "end": 41.76,
-      "text": "moving to Git clone."
+      "start": 38.88,
+      "end": 40.88,
+      "text": "moving to git clone."
     },
     {
-      "start": 41.76,
-      "end": 46.7,
+      "start": 40.88,
+      "end": 45.84,
       "text": "This is defined as the repository duplication command."
     },
     {
-      "start": 46.7,
-      "end": 52.6,
+      "start": 45.84,
+      "end": 51.72,
       "text": "It is creating a complete copy of a remote repository onto your local system."
     },
     {
-      "start": 52.6,
-      "end": 57.6,
+      "start": 51.72,
+      "end": 56.72,
       "text": "All history and branches are transferred during this process."
     },
     {
-      "start": 57.6,
-      "end": 60.2,
-      "text": "Next, we have git add."
+      "start": 56.72,
+      "end": 59.32,
+      "text": "Next we have git add."
     },
     {
-      "start": 60.2,
-      "end": 65.1,
+      "start": 59.32,
+      "end": 64.28,
       "text": "This command is referred to as the staging operation."
     },
     {
-      "start": 65.1,
-      "end": 69.8,
+      "start": 64.28,
+      "end": 68.96,
       "text": "It is placing modified files into the staging area."
     },
     {
-      "start": 69.8,
-      "end": 74.2,
+      "start": 68.96,
+      "end": 73.4,
       "text": "The staging area is preparing changes for the next commit."
     },
     {
-      "start": 74.2,
-      "end": 77.1,
-      "text": "Continuing with git commit,"
+      "start": 73.4,
+      "end": 76.24,
+      "text": "Continuing with git commit."
     },
     {
-      "start": 77.1,
-      "end": 82.9,
-      "text": "this is commonly known as the snapshot command."
+      "start": 76.24,
+      "end": 82.08,
+      "text": "This is commonly known as the snapshot command."
     },
     {
-      "start": 82.9,
-      "end": 88.1,
+      "start": 82.08,
+      "end": 87.28,
       "text": "It is recording the stage changes into the repository history."
     },
     {
-      "start": 88.1,
-      "end": 92.5,
+      "start": 87.28,
+      "end": 91.68,
       "text": "Each commit creates a permanent record with a unique identifier."
     },
     {
-      "start": 92.5,
-      "end": 94.7,
-      "text": "Proceeding to git status,"
+      "start": 91.68,
+      "end": 93.88,
+      "text": "Proceeding to git status."
     },
     {
-      "start": 94.7,
-      "end": 97.7,
-      "text": "this command is defined as the state inspector."
+      "start": 93.88,
+      "end": 96.84,
+      "text": "This command is defined as the state inspector."
     },
     {
-      "start": 97.7,
-      "end": 101.9,
+      "start": 96.84,
+      "end": 101.08,
       "text": "It is showing the current condition of your working directory."
     },
     {
-      "start": 101.9,
-      "end": 108.5,
+      "start": 101.08,
+      "end": 107.68,
       "text": "Modified files, staged files and untracked files are all displayed here."
     },
     {
-      "start": 108.5,
-      "end": 111.7,
-      "text": "Now, examining git push."
+      "start": 107.68,
+      "end": 110.92,
+      "text": "Now examining git push."
     },
     {
-      "start": 111.7,
-      "end": 115.7,
+      "start": 110.92,
+      "end": 114.88,
       "text": "This is referred to as the upload command."
     },
     {
-      "start": 115.7,
-      "end": 120.0,
+      "start": 114.88,
+      "end": 119.2,
       "text": "It is transferring your local commits to a remote repository."
     },
     {
-      "start": 120.0,
-      "end": 124.6,
+      "start": 119.2,
+      "end": 123.8,
       "text": "The remote repository is being updated with your latest changes."
     },
     {
-      "start": 124.6,
-      "end": 126.9,
+      "start": 123.8,
+      "end": 126.04,
       "text": "Moving to git pull."
     },
     {
-      "start": 126.9,
-      "end": 132.7,
+      "start": 126.04,
+      "end": 131.92,
       "text": "This command is commonly known as the synchronization operation."
     },
     {
-      "start": 132.7,
-      "end": 136.0,
+      "start": 131.92,
+      "end": 134.84,
       "text": "It is fetching changes from a remote repository."
     },
     {
-      "start": 136.0,
-      "end": 137.0,
-      "text": "What?"
-    },
-    {
-      "start": 137.0,
-      "end": 141.3,
+      "start": 134.84,
+      "end": 139.08,
       "text": "Those changes are then being merged into your current branch."
     },
     {
-      "start": 141.3,
-      "end": 143.5,
-      "text": "Next, we have git branch."
+      "start": 139.12,
+      "end": 141.4,
+      "text": "Next we have git branch."
     },
     {
-      "start": 143.5,
-      "end": 146.4,
+      "start": 141.4,
+      "end": 144.24,
       "text": "This is defined as the branch management command."
     },
     {
-      "start": 146.4,
-      "end": 150.7,
+      "start": 144.24,
+      "end": 148.48,
       "text": "This is listing all the existing branches in your repository."
     },
     {
-      "start": 150.7,
-      "end": 156.2,
+      "start": 148.48,
+      "end": 154.04,
       "text": "When given a name, it is creating a new branch at the current commit."
     },
     {
-      "start": 156.2,
-      "end": 160.0,
-      "text": "Continuing with git checkout."
+      "start": 154.04,
+      "end": 160.16,
+      "text": "Continuing with git checkout, this command is referred to as the branch switcher."
     },
     {
-      "start": 160.0,
-      "end": 163.9,
-      "text": "This command is referred to as the branch switcher."
-    },
-    {
-      "start": 163.9,
-      "end": 167.9,
+      "start": 160.16,
+      "end": 164.2,
       "text": "It is moving your working directory to a different branch."
     },
     {
-      "start": 167.9,
-      "end": 170.9,
-      "text": "Files in your workspace are being updated to match"
+      "start": 164.2,
+      "end": 168.64,
+      "text": "Files in your workspace are being updated to match the target branch."
     },
     {
-      "start": 171.0,
-      "end": 174.2,
-      "text": "the target branch, proceeding to git merge."
+      "start": 168.68,
+      "end": 170.4,
+      "text": "Proceeding to git merge."
     },
     {
-      "start": 174.2,
-      "end": 179.5,
+      "start": 170.4,
+      "end": 175.68,
       "text": "This is commonly known as the integration command."
     },
     {
-      "start": 179.5,
-      "end": 183.6,
+      "start": 175.68,
+      "end": 179.76,
       "text": "It is combining changes from different branches."
     },
     {
-      "start": 183.6,
-      "end": 189.0,
+      "start": 179.76,
+      "end": 185.12,
       "text": "The histories are being woven together into a unified timeline."
     },
     {
-      "start": 189.0,
-      "end": 193.3,
-      "text": "Now, examining git log."
+      "start": 185.12,
+      "end": 188.4,
+      "text": "Now examining git log."
     },
     {
-      "start": 193.3,
-      "end": 196.2,
+      "start": 188.4,
+      "end": 191.32,
       "text": "This command is defined as the history viewer."
     },
     {
-      "start": 196.2,
-      "end": 200.8,
+      "start": 191.32,
+      "end": 195.92,
       "text": "It is displaying the commit history for your repository."
     },
     {
-      "start": 200.8,
-      "end": 205.7,
+      "start": 195.96,
+      "end": 200.84,
       "text": "Each entry shows the author, the date, and the commit message."
     },
     {
-      "start": 205.7,
-      "end": 208.8,
+      "start": 200.84,
+      "end": 203.92,
       "text": "Moving to git diff."
     },
     {
-      "start": 208.8,
-      "end": 212.4,
+      "start": 203.92,
+      "end": 207.52,
       "text": "This is referred to as the comparison tool."
     },
     {
-      "start": 212.4,
-      "end": 216.6,
+      "start": 207.52,
+      "end": 211.68,
       "text": "It is showing the differences between various states of your code."
     },
     {
-      "start": 216.6,
-      "end": 220.8,
+      "start": 211.68,
+      "end": 215.88,
       "text": "Line by line changes are being highlighted for review."
     },
     {
-      "start": 220.8,
-      "end": 223.4,
-      "text": "Next, we have git reset."
+      "start": 215.88,
+      "end": 218.48,
+      "text": "Next we have git reset."
     },
     {
-      "start": 223.4,
-      "end": 228.1,
+      "start": 218.48,
+      "end": 223.2,
       "text": "This command is commonly known as the undo operation."
     },
     {
-      "start": 228.1,
-      "end": 232.6,
+      "start": 223.24,
+      "end": 227.72,
       "text": "It is moving the current branch pointer to a different commit."
     },
     {
-      "start": 232.6,
-      "end": 236.4,
+      "start": 227.72,
+      "end": 231.52,
       "text": "The staging area can also be modified by this command."
     },
     {
-      "start": 236.4,
-      "end": 239.2,
+      "start": 231.52,
+      "end": 234.32,
       "text": "Continuing with git revert."
     },
     {
-      "start": 239.2,
-      "end": 242.5,
+      "start": 234.32,
+      "end": 237.6,
       "text": "This is defined as the safe undo command."
     },
     {
-      "start": 242.5,
-      "end": 247.0,
+      "start": 237.6,
+      "end": 242.16,
       "text": "It is creating a new commit that reverses previous changes."
     },
     {
-      "start": 247.0,
-      "end": 249.2,
-      "text": "The history remains intact."
+      "start": 242.16,
+      "end": 245.8,
+      "text": "The history remains intact with this approach."
     },
     {
-      "start": 249.2,
-      "end": 252.7,
-      "text": "With this approach, proceeding to git stash,"
+      "start": 245.8,
+      "end": 247.84,
+      "text": "Proceeding to git stash."
     },
     {
-      "start": 252.7,
-      "end": 258.0,
-      "text": "this command is referred to as the temporary storage operation."
+      "start": 247.84,
+      "end": 253.16,
+      "text": "This command is referred to as the temporary storage operation."
     },
     {
-      "start": 258.0,
-      "end": 262.2,
+      "start": 253.16,
+      "end": 257.32,
       "text": "It is saving your uncommitted changes in a hidden area."
     },
     {
-      "start": 262.2,
-      "end": 267.3,
+      "start": 257.32,
+      "end": 262.44,
       "text": "Your working directory is being returned to a clean state."
     },
     {
-      "start": 267.3,
-      "end": 270.5,
-      "text": "Now, examining git fetch."
+      "start": 262.44,
+      "end": 265.68,
+      "text": "Now examining git fetch."
     },
     {
-      "start": 270.5,
-      "end": 273.9,
+      "start": 265.68,
+      "end": 269.08,
       "text": "This is commonly known as the download command."
     },
     {
-      "start": 273.9,
-      "end": 278.8,
+      "start": 269.08,
+      "end": 273.96,
       "text": "It is retrieving commits from a remote repository."
     },
     {
-      "start": 278.8,
-      "end": 283.5,
+      "start": 273.96,
+      "end": 278.64,
       "text": "Unlike pull, it is not merging anything automatically."
     },
     {
-      "start": 283.5,
-      "end": 286.4,
+      "start": 278.64,
+      "end": 281.56,
       "text": "Moving to git remote."
     },
     {
-      "start": 286.4,
-      "end": 290.0,
+      "start": 281.56,
+      "end": 285.2,
       "text": "This command is defined as the connection manager."
     },
     {
-      "start": 290.0,
-      "end": 293.9,
+      "start": 285.2,
+      "end": 289.12,
       "text": "It is listing all configured remote repositories."
     },
     {
-      "start": 293.9,
-      "end": 298.3,
-      "text": "You can add, remove, or rename this connection."
+      "start": 289.12,
+      "end": 293.56,
+      "text": "You can add, remove or rename these connections."
     },
     {
-      "start": 298.3,
-      "end": 300.3,
-      "text": "Next, we have git tag."
+      "start": 293.56,
+      "end": 295.56,
+      "text": "Next we have git tag."
     },
     {
-      "start": 300.3,
-      "end": 304.0,
+      "start": 295.56,
+      "end": 299.2,
       "text": "This is referred to as the marker command."
     },
     {
-      "start": 304.0,
-      "end": 308.3,
+      "start": 299.2,
+      "end": 303.52,
       "text": "It is creating a named reference to a specific commit."
     },
     {
-      "start": 308.3,
-      "end": 312.0,
+      "start": 303.52,
+      "end": 307.16,
       "text": "Tags are often used for release versions."
     },
     {
-      "start": 312.0,
-      "end": 314.9,
+      "start": 307.16,
+      "end": 310.12,
       "text": "Continuing with git show."
     },
     {
-      "start": 314.9,
-      "end": 319.2,
+      "start": 310.16,
+      "end": 314.4,
       "text": "This command is commonly known as the detail viewer."
     },
     {
-      "start": 319.2,
-      "end": 323.6,
+      "start": 314.4,
+      "end": 318.84,
       "text": "It is displaying information about a specific commit."
     },
     {
-      "start": 323.6,
-      "end": 327.5,
+      "start": 318.84,
+      "end": 322.76,
       "text": "The changes introduced are being shown in full."
     },
     {
-      "start": 327.5,
-      "end": 332.0,
-      "text": "Proceeding to git RM, this is defined as the removal command."
+      "start": 322.76,
+      "end": 324.8,
+      "text": "Proceeding to git RM."
     },
     {
-      "start": 332.0,
-      "end": 335.6,
+      "start": 324.8,
+      "end": 327.24,
+      "text": "This is defined as the removal command."
+    },
+    {
+      "start": 327.24,
+      "end": 330.84,
       "text": "It is deleting files from your working directory."
     },
     {
-      "start": 335.6,
-      "end": 341.2,
+      "start": 330.84,
+      "end": 336.4,
       "text": "Those files are also being removed from version control."
     },
     {
-      "start": 341.2,
-      "end": 345.7,
-      "text": "Now, examining git MV."
+      "start": 336.4,
+      "end": 340.92,
+      "text": "Now examining git MV."
     },
     {
-      "start": 345.7,
-      "end": 349.9,
+      "start": 340.92,
+      "end": 345.12,
       "text": "This command is referred to as the rename operation."
     },
     {
-      "start": 349.9,
-      "end": 354.0,
+      "start": 345.12,
+      "end": 349.24,
       "text": "It is moving or renaming files within your repository."
     },
     {
-      "start": 354.0,
-      "end": 359.8,
+      "start": 349.24,
+      "end": 355.0,
       "text": "Git is tracking this change as a rename rather than a deletion."
     },
     {
-      "start": 359.8,
-      "end": 363.4,
+      "start": 355.0,
+      "end": 357.2,
       "text": "Moving to git config."
     },
     {
-      "start": 363.4,
-      "end": 367.6,
+      "start": 357.2,
+      "end": 361.44,
       "text": "This is commonly known as the settings command."
     },
     {
-      "start": 367.6,
-      "end": 370.7,
+      "start": 361.44,
+      "end": 364.48,
       "text": "It is managing your git configuration options."
     },
     {
-      "start": 370.7,
-      "end": 375.5,
-      "text": "Username, email, and preferences are all controlled here."
+      "start": 364.52,
+      "end": 369.36,
+      "text": "Username, email and preferences are all controlled here."
     },
     {
-      "start": 375.5,
-      "end": 378.1,
-      "text": "Next, we have git rebase."
+      "start": 369.36,
+      "end": 371.92,
+      "text": "Next we have git rebase."
     },
     {
-      "start": 378.1,
-      "end": 381.5,
+      "start": 371.92,
+      "end": 375.32,
       "text": "This command is defined as the history rewriter."
     },
     {
-      "start": 381.5,
-      "end": 384.4,
+      "start": 375.32,
+      "end": 378.24,
       "text": "It is moving commits to a new base."
     },
     {
-      "start": 384.4,
-      "end": 388.8,
+      "start": 378.24,
+      "end": 382.6,
       "text": "The commit history is being reorganized for clarity."
     },
     {
-      "start": 388.8,
-      "end": 392.7,
+      "start": 382.6,
+      "end": 386.52,
       "text": "Continuing with git cherry pick guide."
     },
     {
-      "start": 392.7,
-      "end": 396.2,
+      "start": 386.52,
+      "end": 390.04,
       "text": "This is referred to as the selective merge command."
     },
     {
-      "start": 396.2,
-      "end": 400.8,
+      "start": 390.04,
+      "end": 394.6,
       "text": "It is applying specific commits from one branch to another."
     },
     {
-      "start": 400.8,
-      "end": 405.0,
+      "start": 394.6,
+      "end": 398.8,
       "text": "Only the chosen changes are being transferred."
     },
     {
-      "start": 405.0,
-      "end": 407.2,
+      "start": 398.8,
+      "end": 401.0,
       "text": "Proceeding to git clean."
     },
     {
-      "start": 407.2,
-      "end": 410.8,
+      "start": 401.0,
+      "end": 404.6,
       "text": "This command is commonly known as the workspace cleaner."
     },
     {
-      "start": 410.8,
-      "end": 414.6,
+      "start": 404.6,
+      "end": 408.4,
       "text": "It is removing untracked files from your directory."
     },
     {
-      "start": 414.6,
-      "end": 419.0,
+      "start": 408.4,
+      "end": 412.8,
       "text": "The working area is being restored to a pristine state."
     },
     {
-      "start": 419.0,
-      "end": 422.3,
-      "text": "Now, examining git blame."
+      "start": 412.8,
+      "end": 416.08,
+      "text": "Now examining git blame."
     },
     {
-      "start": 422.3,
-      "end": 427.2,
+      "start": 416.12,
+      "end": 421.04,
       "text": "This is defined as the annotation command."
     },
     {
-      "start": 427.2,
-      "end": 431.3,
+      "start": 421.04,
+      "end": 425.08,
       "text": "It is showing who modified each line of a file."
     },
     {
-      "start": 431.3,
-      "end": 435.5,
+      "start": 425.08,
+      "end": 429.32,
       "text": "The commit and author information are displayed for every line."
     },
     {
-      "start": 435.5,
-      "end": 437.8,
+      "start": 429.32,
+      "end": 431.6,
       "text": "Moving to git grep."
     },
     {
-      "start": 437.8,
-      "end": 442.0,
+      "start": 431.6,
+      "end": 435.76,
       "text": "This command is referred to as the search tool."
     },
     {
-      "start": 442.0,
-      "end": 446.6,
+      "start": 435.76,
+      "end": 440.4,
       "text": "It is looking for patterns within your tracked files."
     },
     {
-      "start": 446.6,
-      "end": 450.7,
+      "start": 440.4,
+      "end": 444.52,
       "text": "Text matchings being performed across the entire repository."
     },
     {
-      "start": 450.7,
-      "end": 453.4,
-      "text": "Next, we have git riff log."
+      "start": 444.56,
+      "end": 447.32,
+      "text": "Next we have git riff log."
     },
     {
-      "start": 453.4,
-      "end": 457.1,
+      "start": 447.32,
+      "end": 450.96,
       "text": "This is commonly known as the reference log viewer."
     },
     {
-      "start": 457.1,
-      "end": 462.7,
+      "start": 450.96,
+      "end": 456.56,
       "text": "It is displaying a history of where your branches have pointed."
     },
     {
-      "start": 462.7,
-      "end": 466.1,
+      "start": 456.56,
+      "end": 459.96,
       "text": "Even deleted commits can be found here."
     },
     {
-      "start": 466.1,
-      "end": 469.7,
+      "start": 459.96,
+      "end": 462.8,
       "text": "Continuing with git bisect."
     },
     {
-      "start": 469.7,
-      "end": 470.9,
-      "text": "Why?"
-    },
-    {
-      "start": 470.9,
-      "end": 474.1,
+      "start": 462.8,
+      "end": 466.0,
       "text": "This command is defined as the bug finder."
     },
     {
-      "start": 474.1,
-      "end": 478.4,
+      "start": 466.0,
+      "end": 470.24,
       "text": "It is using binary search to locate problematic comets."
     },
     {
-      "start": 478.4,
-      "end": 483.2,
-      "text": "The process is narrowing down, which change introduced an issue."
+      "start": 470.24,
+      "end": 475.0,
+      "text": "The process is narrowing down which change introduced an issue."
+    },
+    {
+      "start": 475.0,
+      "end": 477.64,
+      "text": "Proceeding to git sub module."
+    },
+    {
+      "start": 477.64,
+      "end": 483.28,
+      "text": "This is referred to as the nested repository manager."
+    },
+    {
+      "start": 483.28,
+      "end": 488.76,
+      "text": "It is allowing you to include other repositories within your project."
+    },
+    {
+      "start": 488.76,
+      "end": 493.04,
+      "text": "Each sub module maintains its own history."
+    },
+    {
+      "start": 493.04,
+      "end": 497.16,
+      "text": "Now examining git archive."
+    },
+    {
+      "start": 497.2,
+      "end": 501.6,
+      "text": "This command is commonly known as the export tool."
+    },
+    {
+      "start": 501.6,
+      "end": 506.6,
+      "text": "It is creating a compressed file of your repository contents."
+    },
+    {
+      "start": 506.6,
+      "end": 510.6,
+      "text": "The .git directory is not included in the output."
+    },
+    {
+      "start": 510.6,
+      "end": 512.64,
+      "text": "Moving to git gc."
+    },
+    {
+      "start": 512.64,
+      "end": 515.52,
+      "text": "This is defined as the garbage collector."
+    },
+    {
+      "start": 515.52,
+      "end": 520.88,
+      "text": "It is optimizing your repository by removing unnecessary files."
+    },
+    {
+      "start": 520.88,
+      "end": 525.12,
+      "text": "Disk space is being reclaimed through this process."
+    },
+    {
+      "start": 525.12,
+      "end": 528.4,
+      "text": "Next, we have git fsck."
+    },
+    {
+      "start": 528.4,
+      "end": 533.2,
+      "text": "This command is referred to as the file system checker."
+    },
+    {
+      "start": 533.2,
+      "end": 538.28,
+      "text": "It is verifying the integrity of your repository database."
+    },
+    {
+      "start": 538.28,
+      "end": 542.2,
+      "text": "Corrupted objects are being identified if present."
+    },
+    {
+      "start": 542.2,
+      "end": 545.32,
+      "text": "Continuing with git prune."
+    },
+    {
+      "start": 545.32,
+      "end": 550.24,
+      "text": "This is commonly known as the cleanup command."
+    },
+    {
+      "start": 550.24,
+      "end": 553.96,
+      "text": "It is removing objects that are no longer referenced."
+    },
+    {
+      "start": 554.0,
+      "end": 558.44,
+      "text": "Unreachable data is being deleted from storage."
+    },
+    {
+      "start": 558.44,
+      "end": 561.16,
+      "text": "Proceeding to git short log."
+    },
+    {
+      "start": 561.16,
+      "end": 565.6,
+      "text": "This command is defined as the summary generator."
+    },
+    {
+      "start": 565.6,
+      "end": 569.64,
+      "text": "It is grouping comets by author contribution statistics"
+    },
+    {
+      "start": 569.64,
+      "end": 572.28,
+      "text": "are being displayed in condensed form."
+    },
+    {
+      "start": 572.28,
+      "end": 575.2,
+      "text": "Now examining git describe."
+    },
+    {
+      "start": 575.2,
+      "end": 578.84,
+      "text": "This is referred to as the version name."
+    },
+    {
+      "start": 578.84,
+      "end": 582.12,
+      "text": "It is finding the most recent tag"
+    },
+    {
+      "start": 582.12,
+      "end": 585.2,
+      "text": "reachable from a commit."
+    },
+    {
+      "start": 585.2,
+      "end": 588.28,
+      "text": "A human readable name is being generated."
+    },
+    {
+      "start": 588.28,
+      "end": 589.92,
+      "text": "Moving to git apply."
+    },
+    {
+      "start": 589.92,
+      "end": 595.0,
+      "text": "This command is commonly known as the patch applyer."
+    },
+    {
+      "start": 595.0,
+      "end": 599.76,
+      "text": "It is reading a defile and applying those changes."
+    },
+    {
+      "start": 599.76,
+      "end": 603.4,
+      "text": "Your working directory is being modified accordingly."
+    },
+    {
+      "start": 603.4,
+      "end": 605.8,
+      "text": "Next, we have git format patch."
+    },
+    {
+      "start": 605.8,
+      "end": 609.4,
+      "text": "This is defined as the patch creator."
+    },
+    {
+      "start": 609.44,
+      "end": 613.28,
+      "text": "It is generating patch files from comets."
+    },
+    {
+      "start": 613.28,
+      "end": 617.12,
+      "text": "These files can be shared and applied elsewhere."
+    },
+    {
+      "start": 617.12,
+      "end": 619.08,
+      "text": "Continuing with git m."
+    },
+    {
+      "start": 619.08,
+      "end": 622.56,
+      "text": "This command is referred to as the mailbox supplier."
+    },
+    {
+      "start": 622.56,
+      "end": 626.48,
+      "text": "It is reading patch files from an email format."
+    },
+    {
+      "start": 626.48,
+      "end": 630.24,
+      "text": "Comets are being created from those patches."
+    },
+    {
+      "start": 630.24,
+      "end": 632.12,
+      "text": "Proceeding to git notes."
+    },
+    {
+      "start": 633.72,
+      "end": 638.52,
+      "text": "This is commonly known as the annotation system."
+    },
+    {
+      "start": 638.52,
+      "end": 642.84,
+      "text": "It is attaching additional information to existing comets."
+    },
+    {
+      "start": 642.84,
+      "end": 645.8,
+      "text": "The commit itself remains unchanged."
+    },
+    {
+      "start": 645.8,
+      "end": 649.44,
+      "text": "Now examining git work tree."
+    },
+    {
+      "start": 649.44,
+      "end": 652.64,
+      "text": "This command is defined as the workspace manager."
+    },
+    {
+      "start": 652.64,
+      "end": 655.08,
+      "text": "It is creating additional working directories"
+    },
+    {
+      "start": 655.08,
+      "end": 657.4,
+      "text": "linked to the same repository."
+    },
+    {
+      "start": 657.4,
+      "end": 660.72,
+      "text": "Multiple branches can be worked on simultaneously."
+    },
+    {
+      "start": 660.72,
+      "end": 663.52,
+      "text": "Moving to git sparse checkout."
+    },
+    {
+      "start": 663.52,
+      "end": 666.8,
+      "text": "This is referred to as the partial clone feature."
+    },
+    {
+      "start": 666.8,
+      "end": 671.8,
+      "text": "It is allowing you to work with only a subset of files."
+    },
+    {
+      "start": 671.8,
+      "end": 675.76,
+      "text": "Large repositories become more manageable this way."
+    },
+    {
+      "start": 675.76,
+      "end": 678.8,
+      "text": "Next, we have git bundle."
+    },
+    {
+      "start": 678.8,
+      "end": 683.72,
+      "text": "This command is commonly known as the repository package."
+    },
+    {
+      "start": 683.72,
+      "end": 689.56,
+      "text": "It is creating a single file containing repository data."
+    },
+    {
+      "start": 689.56,
+      "end": 692.88,
+      "text": "This bundle can be transferred offline"
+    },
+    {
+      "start": 692.88,
+      "end": 695.44,
+      "text": "continuing with git replace."
+    },
+    {
+      "start": 695.44,
+      "end": 699.48,
+      "text": "This is defined as the object substitution command."
+    },
+    {
+      "start": 699.48,
+      "end": 703.4,
+      "text": "It is creating references that replace one object with another."
+    },
+    {
+      "start": 703.4,
+      "end": 706.92,
+      "text": "History can appear modified without changing the actual data."
+    },
+    {
+      "start": 706.92,
+      "end": 709.4,
+      "text": "Proceeding to git filter branch."
+    },
+    {
+      "start": 709.4,
+      "end": 713.56,
+      "text": "This command is referred to as the history rewriter."
+    },
+    {
+      "start": 713.56,
+      "end": 718.16,
+      "text": "It is applying filters to every commit in history."
+    },
+    {
+      "start": 718.16,
+      "end": 723.08,
+      "text": "Files can be removed or content can be modified retroactively."
+    },
+    {
+      "start": 723.08,
+      "end": 726.6,
+      "text": "Now, examining git request pull."
+    },
+    {
+      "start": 726.6,
+      "end": 730.76,
+      "text": "This is commonly known as the summary generator."
+    },
+    {
+      "start": 730.76,
+      "end": 734.8,
+      "text": "It is creating a message that summarizes changes."
+    },
+    {
+      "start": 734.8,
+      "end": 739.04,
+      "text": "This message is used to request merges from maintainers."
+    },
+    {
+      "start": 739.04,
+      "end": 741.16,
+      "text": "Moving to git rarer."
+    },
+    {
+      "start": 741.16,
+      "end": 745.4,
+      "text": "This is defined as the ruse recorded resolution feature."
+    },
+    {
+      "start": 745.4,
+      "end": 748.16,
+      "text": "It is remembering how you resolved conflicts."
+    },
+    {
+      "start": 748.2,
+      "end": 753.44,
+      "text": "Similar conflicts are being resolved automatically in the future."
+    },
+    {
+      "start": 753.44,
+      "end": 756.2,
+      "text": "Final command processed."
+    },
+    {
+      "start": 756.2,
+      "end": 759.24,
+      "text": "The version control reference session ends here."
+    },
+    {
+      "start": 759.24,
+      "end": 763.04,
+      "text": "All documentation has been reviewed."
+    },
+    {
+      "start": 763.04,
+      "end": 766.16,
+      "text": "System transitioning to rest mode."
+    },
+    {
+      "start": 766.16,
+      "end": 768.96,
+      "text": "Entering sleep state."
+    },
+    {
+      "start": 768.96,
+      "end": 770.12,
+      "text": "Sleep well."
     }
   ]
 }
