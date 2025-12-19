@@ -15,7 +15,7 @@ const {
    HELPERS
    =============================== */
 function secondsToFrames(seconds, fps) {
-  return Math.max(1, Math.round(seconds * fps));
+  return Math.max(1, Math.ceil(seconds * fps));
 }
 
 function buildTypingAudioFilter(events) {
@@ -164,7 +164,6 @@ ffmpeg -y \
 -map "[mixed]" \
 -c:v copy \
 -c:a aac \
--shortest \
 ${FINAL_VIDEO}
 `;
 
