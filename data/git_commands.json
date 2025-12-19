@@ -81,6 +81,342 @@
 "text": "Now examining git push. This upload command transfers your local commits to a remote repository, updating it with your latest changes.",
 "start": 107.68,
 "end": 123.8
+},
+{
+"id": "git_pull",
+"type": "command",
+"command": "git pull",
+"text": "Moving to git pull. This synchronization operation fetches changes from a remote repository and merges them into your current branch.",
+"start": 123.8,
+"end": 139.08
+},
+{
+"id": "git_branch",
+"type": "command",
+"command": "git branch",
+"text": "Next we have git branch. This branch management command lists existing branches and can create a new branch at the current commit.",
+"start": 139.12,
+"end": 154.04
+},
+{
+"id": "git_checkout",
+"type": "command",
+"command": "git checkout",
+"text": "Continuing with git checkout. This branch switcher moves your working directory to a different branch, updating files to match the target.",
+"start": 154.04,
+"end": 168.64
+},
+{
+"id": "git_merge",
+"type": "command",
+"command": "git merge",
+"text": "Proceeding to git merge. This integration command combines changes from different branches, weaving histories into a unified timeline.",
+"start": 168.68,
+"end": 185.12
+},
+{
+"id": "git_log",
+"type": "command",
+"command": "git log",
+"text": "Now examining git log. This history viewer displays the commit history, showing authors, dates, and commit messages.",
+"start": 185.12,
+"end": 200.84
+},
+{
+"id": "git_diff",
+"type": "command",
+"command": "git diff",
+"text": "Moving to git diff. This comparison tool shows differences between code states, highlighting line by line changes.",
+"start": 200.84,
+"end": 215.88
+},
+{
+"id": "git_reset",
+"type": "command",
+"command": "git reset",
+"text": "Next we have git reset. This undo operation moves the branch pointer to a different commit and can modify the staging area.",
+"start": 215.88,
+"end": 231.52
+},
+{
+"id": "git_revert",
+"type": "command",
+"command": "git revert",
+"text": "Continuing with git revert. This safe undo command creates a new commit that reverses previous changes while keeping history intact.",
+"start": 231.52,
+"end": 245.8
+},
+{
+"id": "git_stash",
+"type": "command",
+"command": "git stash",
+"text": "Proceeding to git stash. This temporary storage operation saves uncommitted changes and returns the working directory to a clean state.",
+"start": 245.8,
+"end": 262.44
+},
+{
+"id": "git_fetch",
+"type": "command",
+"command": "git fetch",
+"text": "Now examining git fetch. This download command retrieves commits from a remote repository without merging them automatically.",
+"start": 262.44,
+"end": 278.64
+},
+{
+"id": "git_remote",
+"type": "command",
+"command": "git remote",
+"text": "Moving to git remote. This connection manager lists configured remotes and allows adding, removing, or renaming them.",
+"start": 278.64,
+"end": 293.56
+},
+{
+"id": "git_tag",
+"type": "command",
+"command": "git tag",
+"text": "Next we have git tag. This marker command creates named references to specific commits, often used for releases.",
+"start": 293.56,
+"end": 307.16
+},
+{
+"id": "git_show",
+"type": "command",
+"command": "git show",
+"text": "Continuing with git show. This detail viewer displays information and changes for a specific commit.",
+"start": 307.16,
+"end": 322.76
+},
+{
+"id": "git_rm",
+"type": "command",
+"command": "git rm",
+"text": "Proceeding to git rm. This removal command deletes files from the working directory and version control.",
+"start": 322.76,
+"end": 336.4
+},
+{
+"id": "git_mv",
+"type": "command",
+"command": "git mv",
+"text": "Now examining git mv. This rename operation moves or renames files, tracked by Git as a rename.",
+"start": 336.4,
+"end": 355.0
+},
+{
+"id": "git_config",
+"type": "command",
+"command": "git config",
+"text": "Moving to git config. This settings command manages configuration options such as username and email.",
+"start": 355.0,
+"end": 369.36
+},
+{
+"id": "git_rebase",
+"type": "command",
+"command": "git rebase",
+"text": "Next we have git rebase. This history rewriter moves commits to a new base, reorganizing history for clarity.",
+"start": 369.36,
+"end": 382.6
+},
+{
+"id": "git_cherry_pick",
+"type": "command",
+"command": "git cherry-pick",
+"text": "Continuing with git cherry pick. This selective merge command applies specific commits from one branch to another.",
+"start": 382.6,
+"end": 398.8
+},
+{
+"id": "git_clean",
+"type": "command",
+"command": "git clean",
+"text": "Proceeding to git clean. This workspace cleaner removes untracked files, restoring a pristine state.",
+"start": 398.8,
+"end": 412.8
+},
+{
+"id": "git_blame",
+"type": "command",
+"command": "git blame",
+"text": "Now examining git blame. This annotation command shows who modified each line, with commit and author details.",
+"start": 412.8,
+"end": 429.32
+},
+{
+"id": "git_grep",
+"type": "command",
+"command": "git grep",
+"text": "Moving to git grep. This search tool looks for patterns across tracked files in the repository.",
+"start": 429.32,
+"end": 444.52
+},
+{
+"id": "git_reflog",
+"type": "command",
+"command": "git reflog",
+"text": "Next we have git reflog. This reference log viewer shows where branches have pointed, including deleted commits.",
+"start": 444.56,
+"end": 459.96
+},
+{
+"id": "git_bisect",
+"type": "command",
+"command": "git bisect",
+"text": "Continuing with git bisect. This bug finder uses binary search to locate the commit that introduced an issue.",
+"start": 459.96,
+"end": 475.0
+},
+{
+"id": "git_submodule",
+"type": "command",
+"command": "git submodule",
+"text": "Proceeding to git submodule. This nested repository manager allows including other repositories within a project.",
+"start": 475.0,
+"end": 493.04
+},
+{
+"id": "git_archive",
+"type": "command",
+"command": "git archive",
+"text": "Now examining git archive. This export tool creates a compressed file of repository contents without the dot git directory.",
+"start": 493.04,
+"end": 510.6
+},
+{
+"id": "git_gc",
+"type": "command",
+"command": "git gc",
+"text": "Moving to git gc. This garbage collector optimizes the repository and reclaims disk space.",
+"start": 510.6,
+"end": 525.12
+},
+{
+"id": "git_fsck",
+"type": "command",
+"command": "git fsck",
+"text": "Next we have git fsck. This file system checker verifies repository integrity and identifies corrupted objects.",
+"start": 525.12,
+"end": 542.2
+},
+{
+"id": "git_prune",
+"type": "command",
+"command": "git prune",
+"text": "Continuing with git prune. This cleanup command removes unreachable objects from storage.",
+"start": 542.2,
+"end": 558.44
+},
+{
+"id": "git_shortlog",
+"type": "command",
+"command": "git shortlog",
+"text": "Proceeding to git shortlog. This summary generator groups commits by author in condensed form.",
+"start": 558.44,
+"end": 572.28
+},
+{
+"id": "git_describe",
+"type": "command",
+"command": "git describe",
+"text": "Now examining git describe. This version naming command finds the nearest tag and generates a human readable name.",
+"start": 572.28,
+"end": 588.28
+},
+{
+"id": "git_apply",
+"type": "command",
+"command": "git apply",
+"text": "Moving to git apply. This patch applier reads a diff file and applies changes to the working directory.",
+"start": 588.28,
+"end": 603.4
+},
+{
+"id": "git_format_patch",
+"type": "command",
+"command": "git format-patch",
+"text": "Next we have git format patch. This patch creator generates patch files from commits for sharing.",
+"start": 603.4,
+"end": 617.12
+},
+{
+"id": "git_am",
+"type": "command",
+"command": "git am",
+"text": "Continuing with git am. This mailbox importer reads patch emails and creates commits from them.",
+"start": 617.12,
+"end": 630.24
+},
+{
+"id": "git_notes",
+"type": "command",
+"command": "git notes",
+"text": "Proceeding to git notes. This annotation system attaches additional information to commits without altering them.",
+"start": 630.24,
+"end": 645.8
+},
+{
+"id": "git_worktree",
+"type": "command",
+"command": "git worktree",
+"text": "Now examining git worktree. This workspace manager creates additional working directories for multiple branches.",
+"start": 645.8,
+"end": 660.72
+},
+{
+"id": "git_sparse_checkout",
+"type": "command",
+"command": "git sparse-checkout",
+"text": "Moving to git sparse checkout. This feature allows working with only a subset of files in large repositories.",
+"start": 660.72,
+"end": 675.76
+},
+{
+"id": "git_bundle",
+"type": "command",
+"command": "git bundle",
+"text": "Next we have git bundle. This repository package creates a single transferable file for offline sharing.",
+"start": 675.76,
+"end": 692.88
+},
+{
+"id": "git_replace",
+"type": "command",
+"command": "git replace",
+"text": "Continuing with git replace. This object substitution command replaces objects without altering underlying data.",
+"start": 692.88,
+"end": 706.92
+},
+{
+"id": "git_filter_branch",
+"type": "command",
+"command": "git filter-branch",
+"text": "Proceeding to git filter branch. This history rewriter applies filters across commits, modifying history retroactively.",
+"start": 706.92,
+"end": 723.08
+},
+{
+"id": "git_request_pull",
+"type": "command",
+"command": "git request-pull",
+"text": "Now examining git request pull. This command generates a summary message requesting a merge from maintainers.",
+"start": 723.08,
+"end": 739.04
+},
+{
+"id": "git_rerere",
+"type": "command",
+"command": "git rerere",
+"text": "Moving to git rerere. This feature remembers conflict resolutions and applies them automatically in the future.",
+"start": 739.04,
+"end": 753.44
+},
+{
+"id": "outro",
+"type": "narration",
+"command": null,
+"text": "The version control reference session ends here. System transitioning to rest mode. Sleep well.",
+"start": 753.44,
+"end": 770.12
 }
 ]
 }

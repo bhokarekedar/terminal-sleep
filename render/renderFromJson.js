@@ -100,7 +100,6 @@ const usedFrames = await renderCommandSequence(
   block.command,
   totalFrames
 );
-
 remainingFrames = totalFrames - usedFrames;
     }
 

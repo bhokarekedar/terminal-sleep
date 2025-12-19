@@ -137,13 +137,17 @@ async function renderFrame(
   );
 }
 
+function msToFrames(ms) {
+  return Math.round((ms / 1000) * FPS);
+}
+
 /* ===============================
    COMMAND SEQUENCE
    =============================== */
 async function renderCommandSequence(commandText, maxFrames) {
   let used = 0;
 
-  // typing
+  /* ── Typing animation ── */
   for (let i = 1; i <= commandText.length && used < maxFrames; i++) {
     for (let f = 0; f < FRAMES_PER_CHAR && used < maxFrames; f++) {
       await renderFrame(commandText.slice(0, i), true);
@@ -151,15 +155,40 @@ async function renderCommandSequence(commandText, maxFrames) {
     }
   }
 
-  // blink
-  const blinkFrames = Math.floor((POST_TYPE_PAUSE_MS / 1000) * FPS);
-  for (let i = 0; i < blinkFrames && used < maxFrames; i++) {
-    await renderFrame(commandText, i % 2 === 0);
+  /* ── Calm cursor blink ── */
+  const BLINK_ON_MS = 500;
+  const BLINK_OFF_MS = 500;
+
+  const onFrames = msToFrames(BLINK_ON_MS);
+  const offFrames = msToFrames(BLINK_OFF_MS);
+
+  let blinkRemaining = msToFrames(POST_TYPE_PAUSE_MS);
+
+  while (blinkRemaining > 0 && used < maxFrames) {
+    // Cursor ON
+    for (let i = 0; i < onFrames && blinkRemaining > 0 && used < maxFrames; i++) {
+      await renderFrame(commandText, true);
+      used++;
+      blinkRemaining--;
+    }
+
+    // Cursor OFF
+    for (let i = 0; i < offFrames && blinkRemaining > 0 && used < maxFrames; i++) {
+      await renderFrame(commandText, false);
+      used++;
+      blinkRemaining--;
+    }
+  }
+
+  /* ── Final steady cursor (no flicker end) ── */
+  if (used < maxFrames) {
+    await renderFrame(commandText, true);
     used++;
   }
 
   return used;
 }
+
 
 async function renderExplanationHold(commandText, explanationText, frames) {
   const fadeFrames = Math.min(
