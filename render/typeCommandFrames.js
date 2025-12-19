@@ -186,9 +186,11 @@ function getCommandAnimationFrames(commandText) {
 
   return typingFrames + blinkFrames + fadeFrames;
 }
-
+function getTypingFrames(commandText) {
+  return commandText.length * FRAMES_PER_CHAR;
+}
 
 /* ===============================
    EXPORT
    =============================== */
-module.exports = { renderCommandSequence, renderExplanationHold, getCommandAnimationFrames };
+module.exports = { renderCommandSequence, renderExplanationHold, getCommandAnimationFrames, getTypingFrames };

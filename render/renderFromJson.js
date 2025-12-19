@@ -3,11 +3,32 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-const { renderCommandSequence, renderExplanationHold, getCommandAnimationFrames } = require("./typeCommandFrames");
 
+const {
+  renderCommandSequence,
+  renderExplanationHold,
+  getCommandAnimationFrames, 
+  getTypingFrames
+} = require("./typeCommandFrames");
+
+/* ===============================
+   HELPERS
+   =============================== */
 function secondsToFrames(seconds, fps) {
   return Math.max(1, Math.round(seconds * fps));
 }
+
+function buildTypingAudioFilter(events) {
+  return events
+    .map(
+      (e, i) =>
+        `[2:a]atrim=0:${e.duration},adelay=${Math.floor(
+          e.start * 1000
+        )}|${Math.floor(e.start * 1000)},volume=0.6[a${i}]`
+    )
+    .join(";");
+}
+
 
 /* ===============================
    CONFIG
@@ -15,76 +36,88 @@ function secondsToFrames(seconds, fps) {
 const DATA_PATH = "data/git_commands.json";
 const FRAMES_DIR = "output/typing";
 
-
 const FPS = 30;
+
+const NARRATION_AUDIO = "server/audio/git_commands_narration.wav";
+const TYPING_AUDIO = "server/audio/bgMusic/typing.wav";
 
 /* ===============================
    LOAD DATA
    =============================== */
 const data = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
+
 const VIDEO_ID = data.videoId || `video_${Date.now()}`;
+const fps = data.fps || FPS;
 
 const OUTPUT_VIDEO = path.join(
   "output",
   "videos",
   `${VIDEO_ID}.mp4`
 );
-const AUDIO_PATH = "server/audio/git_commands_narration.wav";
 
 const FINAL_VIDEO = path.join(
   "output",
   "videos",
   `${VIDEO_ID}_final.mp4`
 );
+
 /* ===============================
    MAIN
    =============================== */
 (async () => {
   console.log("🟢 Starting render pipeline");
 
-  // 1️⃣ Render frames for each command
-const timeline = data.timeline;
-const fps = data.fps || FPS;
+  const timeline = data.timeline;
+  const typingAudioEvents = [];
 
+  /* ===============================
+     RENDER FRAMES
+     =============================== */
+  for (const block of timeline) {
+    const durationSeconds = block.end - block.start;
+    const totalFrames = secondsToFrames(durationSeconds, fps);
 
-for (const block of timeline) {
-  const durationSeconds = block.end - block.start;
-  const totalFrames = secondsToFrames(durationSeconds, fps);
+    console.log(`▶ Rendering block: ${block.id} (${block.type})`);
 
-  console.log(`▶ Rendering block: ${block.id} (${block.type})`);
+    let remainingFrames = totalFrames;
 
-  let remainingFrames = totalFrames;
+    // ── Command typing animation ──
+    if (block.type === "command" && block.command) {
+const animationFrames = getCommandAnimationFrames(block.command);
+const typingFrames = getTypingFrames(block.command);
 
-  // 1️⃣ Command animation (counts toward timeline time)
-  if (block.type === "command" && block.command) {
-    const animationFrames =
-      getCommandAnimationFrames(block.command);
+typingAudioEvents.push({
+  start: block.start,
+  duration: typingFrames / fps
+});
 
-    await renderCommandSequence(block.command, "");
+      // render typing animation ONCE
+      await renderCommandSequence(block.command, "");
 
-    remainingFrames -= animationFrames;
+      // subtract animation time from timeline budget
+      remainingFrames -= animationFrames;
+    }
+
+    // ── Explanation / narration hold ──
+    if (remainingFrames > 0) {
+      await renderExplanationHold(
+        block.command || "",
+        block.text,
+        remainingFrames
+      );
+    }
   }
-
-  // 2️⃣ Hold explanation for remaining time only
-  if (remainingFrames > 0) {
-    await renderExplanationHold(
-      block.command || "",
-      block.text,
-      remainingFrames
-    );
-  }
-}
-
-
 
   console.log("🟢 All frames rendered");
 
-  // 2️⃣ Assemble video
-  console.log("🎞 Assembling video with FFmpeg...");
+  /* ===============================
+     CREATE SILENT VIDEO
+     =============================== */
+  console.log("🎞 Assembling silent video...");
 
-  const ffmpegCmd = `
+  const renderCmd = `
 ffmpeg -y \
--framerate ${FPS} \
+-framerate ${fps} \
 -i ${FRAMES_DIR}/frame_%06d.png \
 -c:v libx264 \
 -pix_fmt yuv420p \
@@ -94,15 +127,41 @@ ffmpeg -y \
 ${OUTPUT_VIDEO}
 `;
 
-  execSync(ffmpegCmd, { stdio: "inherit" });
+  execSync(renderCmd, { stdio: "inherit" });
 
-  console.log("✅ Video created:", OUTPUT_VIDEO);
-console.log("🔊 Muxing audio with video...");
+  console.log("✅ Silent video created:", OUTPUT_VIDEO);
+
+  /* ===============================
+     MUX AUDIO (NARRATION + TYPING)
+     =============================== */
+  console.log("🔊 Muxing narration and typing audio...");
+
+
+let filterGraph = "";
+
+if (typingAudioEvents.length > 0) {
+  const typingChains = buildTypingAudioFilter(typingAudioEvents);
+  const typingLabels = typingAudioEvents
+    .map((_, i) => `[a${i}]`)
+    .join("");
+
+  filterGraph = `
+${typingChains};
+[1:a]${typingLabels}amix=inputs=${typingAudioEvents.length + 1}:normalize=0[mixed]
+`;
+} else {
+  // No typing audio → just pass narration through
+  filterGraph = `[1:a]anull[mixed]`;
+}
 
 const muxCmd = `
 ffmpeg -y \
 -i ${OUTPUT_VIDEO} \
--i ${AUDIO_PATH} \
+-i ${NARRATION_AUDIO} \
+-i ${TYPING_AUDIO} \
+-filter_complex "${filterGraph}" \
+-map 0:v \
+-map "[mixed]" \
 -c:v copy \
 -c:a aac \
 -shortest \
@@ -111,10 +170,13 @@ ${FINAL_VIDEO}
 
 execSync(muxCmd, { stdio: "inherit" });
 
-console.log("🎉 Final video with audio created:", FINAL_VIDEO);
+console.log("🎉 Final video created:", FINAL_VIDEO);
 
-  // 3️⃣ Cleanup
-  console.log("🧹 Cleaning frame files...");
+
+  /* ===============================
+     CLEANUP
+     =============================== */
+  console.log("🧹 Cleaning up frame files...");
 
   for (const file of fs.readdirSync(FRAMES_DIR)) {
     if (file.endsWith(".png")) {
